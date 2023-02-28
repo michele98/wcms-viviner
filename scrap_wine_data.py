@@ -1,4 +1,3 @@
-import argparse
 import json
 import numpy as np
 
@@ -32,8 +31,7 @@ def scrap_wine_data(country_code):
     data['wines_minimal'] = []
 
     # Iterates through the amount of possible pages
-    # for i in range(start_page, max(1, int(n_matches / c.RECORDS_PER_PAGE)) + 1):
-    for i in range(start_page, max(1, 3)):
+    for i in range(start_page, max(1, int(n_matches / c.RECORDS_PER_PAGE)) + 1):
         print(f'[{country_code}] Number of matches: {n_matches} - Page {i}/{n_pages}', end='\r')
 
         # Performs the request and scraps the URLs
